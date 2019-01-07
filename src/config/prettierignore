@@ -1,0 +1,4 @@
+**/*.scss
+**/vendor/auto_built/**
+package.json
+**/*.yml
