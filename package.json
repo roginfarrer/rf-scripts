@@ -1,6 +1,6 @@
 {
   "name": "rf-scripts",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "description": "super awesome build scripts!",
   "engines": {
     "node": ">= 8",
@@ -13,9 +13,16 @@
     "build": "node src build",
     "lint": "node src lint",
     "format": "node src format",
-    "test": "node src test"
+    "test": "node src test",
+    "semantic-release": "semantic-release"
   },
-  "files": ["dist", "config", "eslint", "prettier", "jest"],
+  "files": [
+    "dist",
+    "config",
+    "eslint",
+    "prettier",
+    "jest"
+  ],
   "author": "Rogin Farrer <rfarrer@wayfair.com>",
   "license": "ISC",
   "dependencies": {
@@ -67,5 +74,16 @@
       "no-console": "off"
     }
   },
-  "eslintIgnore": ["node_modules", "coverage", "dist"]
+  "eslintIgnore": [
+    "node_modules",
+    "coverage",
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/roginfarrer/rf-scripts.git"
+  },
+  "devDependencies": {
+    "semantic-release": "^15.13.2"
+  }
 }
