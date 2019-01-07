@@ -14,16 +14,10 @@
     "lint": "node src lint",
     "format": "node src format",
     "test": "node src test",
-    "semantic-release": "semantic-release"
+    "validate": "node src validate"
   },
-  "files": [
-    "dist",
-    "config",
-    "eslint",
-    "prettier",
-    "jest"
-  ],
-  "author": "Rogin Farrer <rfarrer@wayfair.com>",
+  "files": ["dist", "config", "eslint", "prettier", "jest"],
+  "author": "Rogin Farrer <rogin@roginfarrer.com>",
   "license": "ISC",
   "dependencies": {
     "@babel/cli": "^7.2.0",
@@ -74,16 +68,9 @@
       "no-console": "off"
     }
   },
-  "eslintIgnore": [
-    "node_modules",
-    "coverage",
-    "dist"
-  ],
+  "eslintIgnore": ["node_modules", "coverage", "dist"],
   "repository": {
     "type": "git",
     "url": "https://github.com/roginfarrer/rf-scripts.git"
-  },
-  "devDependencies": {
-    "semantic-release": "^15.13.2"
   }
 }
