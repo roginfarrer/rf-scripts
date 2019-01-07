@@ -16,7 +16,13 @@
     "test": "node src test",
     "validate": "node src validate"
   },
-  "files": ["dist", "config", "eslint", "prettier", "jest"],
+  "files": [
+    "dist",
+    "config",
+    "eslint",
+    "prettier",
+    "jest"
+  ],
   "author": "Rogin Farrer <rogin@roginfarrer.com>",
   "license": "ISC",
   "dependencies": {
@@ -36,6 +42,7 @@
     "babel-plugin-module-resolver": "^3.1.1",
     "babel-plugin-transform-inline-environment-variables": "^0.4.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.21",
+    "concurrently": "^4.1.0",
     "cross-spawn": "^6.0.5",
     "eslint": "4.19.1",
     "eslint-plugin-import": "^2.14.0",
@@ -68,7 +75,11 @@
       "no-console": "off"
     }
   },
-  "eslintIgnore": ["node_modules", "coverage", "dist"],
+  "eslintIgnore": [
+    "node_modules",
+    "coverage",
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/roginfarrer/rf-scripts.git"
