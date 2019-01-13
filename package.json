@@ -1,6 +1,6 @@
 {
   "name": "rogin-scripts",
-  "version": "0.0.1-development",
+  "version": "0.0.2-development",
   "description": "super awesome build scripts!",
   "engines": {
     "node": ">= 8",
@@ -16,7 +16,14 @@
     "test": "node src test",
     "validate": "node src validate"
   },
-  "files": ["dist", "config", "eslint", "prettier", "jest"],
+  "files": [
+    "dist",
+    "babel.js",
+    "eslint.js",
+    "config.js",
+    "prettier.js",
+    "jest.js"
+  ],
   "author": "Rogin Farrer <rogin@roginfarrer.com>",
   "license": "ISC",
   "dependencies": {
