@@ -1,4 +1,4 @@
-# rf-scripts
+# rogin-scripts
 
 This is a fork from [kcd-scripts](https://github.com/kentcdodds/kcd-scripts)!
 

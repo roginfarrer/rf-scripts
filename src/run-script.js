@@ -32,7 +32,7 @@ Available Scripts:
 
 function getEnv() {
   // this is required to address an issue in cross-spawn
-  // https://github.com/kentcdodds/rf-scripts/issues/4
+  // https://github.com/kentcdodds/rogin-scripts/issues/4
   return Object.keys(process.env)
     .filter(key => process.env[key] !== undefined)
     .reduce(

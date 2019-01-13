@@ -13,10 +13,10 @@ const {pkg, path: pkgPath} = readPkgUp.sync({
 const appDirectory = path.dirname(pkgPath);
 
 function resolveKcdScripts() {
-  if (pkg.name === 'rf-scripts') {
+  if (pkg.name === 'rogin-scripts') {
     return require.resolve('./').replace(process.cwd(), '.');
   }
-  return resolveBin('rf-scripts');
+  return resolveBin('rogin-scripts');
 }
 
 // eslint-disable-next-line complexity

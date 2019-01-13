@@ -1,5 +1,5 @@
 {
-  "name": "rf-scripts",
+  "name": "rogin-scripts",
   "version": "0.0.1-development",
   "description": "super awesome build scripts!",
   "engines": {
@@ -7,7 +7,7 @@
     "npm": ">= 5"
   },
   "bin": {
-    "rf-scripts": "dist/index.js"
+    "rogin-scripts": "dist/index.js"
   },
   "scripts": {
     "build": "node src build",
@@ -81,6 +81,6 @@
   "eslintIgnore": ["node_modules", "coverage", "dist"],
   "repository": {
     "type": "git",
-    "url": "https://github.com/roginfarrer/rf-scripts.git"
+    "url": "https://github.com/roginfarrer/rogin-scripts.git"
   }
 }
