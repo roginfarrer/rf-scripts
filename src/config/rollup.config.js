@@ -27,7 +27,6 @@ const capitalize = s => s[0].toUpperCase() + s.slice(1);
 
 const minify = parseEnv('BUILD_MINIFY', false);
 const format = process.env.BUILD_FORMAT;
-const isPreact = parseEnv('BUILD_PREACT', false);
 const isNode = parseEnv('BUILD_NODE', false);
 const name = process.env.BUILD_NAME || capitalize(camelcase(pkg.name));
 const useSizeSnapshot = parseEnv('BUILD_SIZE_SNAPSHOT', false);
@@ -66,26 +65,16 @@ if (
 }
 
 const filenameSuffix = process.env.BUILD_FILENAME_SUFFIX || '';
-const filenamePrefix =
-  process.env.BUILD_FILENAME_PREFIX || (isPreact ? 'preact/' : '');
-const globals = parseEnv(
-  'BUILD_GLOBALS',
-  isPreact ? Object.assign(defaultGlobals, {preact: 'preact'}) : defaultGlobals
+const filenamePrefix = process.env.BUILD_FILENAME_PREFIX || '';
+const globals = parseEnv('BUILD_GLOBALS', defaultGlobals);
+const external = parseEnv('BUILD_EXTERNAL', defaultExternal).filter(
+  (e, i, arry) => arry.indexOf(e) === i
 );
-const external = parseEnv(
-  'BUILD_EXTERNAL',
-  isPreact ? defaultExternal.concat(['preact', 'prop-types']) : defaultExternal
-).filter((e, i, arry) => arry.indexOf(e) === i);
-
-if (isPreact) {
-  delete globals.react;
-  delete globals['prop-types']; // TODO: is this necessary?
-  external.splice(external.indexOf('react'), 1);
-}
 
 const externalPattern = new RegExp(`^(${external.join('|')})($|/)`);
 
 function externalPredicate(id) {
+  console.log('rogin - id', id);
   const isDep = externalPattern.test(id);
   if (umd) {
     // for UMD, we want to bundle all non-peer deps
