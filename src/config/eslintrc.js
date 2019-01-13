@@ -1,15 +1,11 @@
 const {ifAnyDep} = require('../utils');
 
 module.exports = {
-  env: {
-    es6: true
-  },
   extends: [
-    'eslint:recommended',
-    'plugin:import/errors',
-    'plugin:import/warnings',
-    ifAnyDep('react', 'plugin:react/recommended'),
-    ifAnyDep('react', 'plugin:jsx-a11y/recommended')
+    require.resolve('eslint-config-kentcdodds'),
+    require.resolve('eslint-config-kentcdodds/jest'),
+    ifAnyDep('react', require.resolve('eslint-config-kentcdodds/jsx-a11y')),
+    ifAnyDep('react', require.resolve('eslint-config-kentcdodds/react'))
   ].filter(Boolean),
   rules: {}
 };
