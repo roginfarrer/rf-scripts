@@ -1,6 +1,6 @@
 {
   "name": "rogin-scripts",
-  "version": "0.0.2-development",
+  "version": "0.0.4-development",
   "description": "super awesome build scripts!",
   "engines": {
     "node": ">= 8",

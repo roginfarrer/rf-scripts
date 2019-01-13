@@ -7,5 +7,11 @@ module.exports = {
     ifAnyDep('react', require.resolve('eslint-config-kentcdodds/jsx-a11y')),
     ifAnyDep('react', require.resolve('eslint-config-kentcdodds/react'))
   ].filter(Boolean),
-  rules: {}
+  rules: {
+    'react/no-did-mount-set-state': 'off',
+    'react/default-props-match-prop-types': [
+      'error',
+      {allowRequiredDefaults: true}
+    ]
+  }
 };

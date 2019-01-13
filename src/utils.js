@@ -12,7 +12,7 @@ const {pkg, path: pkgPath} = readPkgUp.sync({
 });
 const appDirectory = path.dirname(pkgPath);
 
-function resolveKcdScripts() {
+function resolveRoginScripts() {
   if (pkg.name === 'rogin-scripts') {
     return require.resolve('./').replace(process.cwd(), '.');
   }
@@ -186,7 +186,7 @@ module.exports = {
   parseEnv,
   pkg,
   resolveBin,
-  resolveKcdScripts,
+  resolveRoginScripts,
   uniq,
   writeExtraEntry
 };

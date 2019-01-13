@@ -5,5 +5,5 @@ test('requiring some files does not blow up', () => {
   require('../jest.config');
   require('../prettier.config');
   require('../rollup.config');
-  // require('../').getRollupConfig();
+  require('../').getRollupConfig();
 });
