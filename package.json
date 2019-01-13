@@ -1,6 +1,6 @@
 {
   "name": "rf-scripts",
-  "version": "0.0.0-development",
+  "version": "0.0.1-development",
   "description": "super awesome build scripts!",
   "engines": {
     "node": ">= 8",
